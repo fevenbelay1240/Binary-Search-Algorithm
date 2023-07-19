@@ -8,7 +8,7 @@ package algorithm;
 
 import java.util.Arrays;
 
-public class BST {
+public class BS {
 
     // first the list/array needs to be sorted
     /*
@@ -51,7 +51,7 @@ public class BST {
 
     public static void main(String[] args) {
         int[] nums = { 2, 8, 4, 6, 9, 3, 7 };
-        BST b = new BST();
+        BS b = new BS();
         Arrays.sort(nums);
         for (int i = 0; i < nums.length;i++) {
             System.out.print(nums[i]);

@@ -10,7 +10,8 @@ import java.util.Arrays;
 
 public class BS {
 
-    public int searchNum(int[] arr, int num) {
+    public static int searchNum(int[] arr, int num) {
+         Arrays.sort(arr);
         int left = 0;
         int right = arr.length - 1;
 
@@ -19,10 +20,10 @@ public class BS {
             int midNum = arr[mid];
             if (midNum == num) {
                 return mid;
-            } else if (midNum < num) {
+            }  if (midNum < num) {
                 right = mid - 1;
 
-            } else if (midNum > num) {
+            } else {
                 left = mid + 1;
             }
         }
@@ -30,13 +31,14 @@ public class BS {
     }
 
     public static void main(String[] args) {
-        int[] nums = { 2, 8, 4, 6, 9, 3, 7 };
         BS b = new BS();
-        Arrays.sort(nums);
-        for (int i = 0; i < nums.length; i++) {
-            System.out.print(nums[i]);
+ 
+        int[] ar = {1,2,3,4,5,6};
+            System.out.print("Array is ");
+        for(int n: ar){
+          System.out.print( n + " ");
         }
-        System.out.println();
-        System.out.println(b.searchNum(nums, 3));
+            System.out.println();
+        System.out.println("Index where the number is found is " + searchNum(ar, 3));
     }
 }
